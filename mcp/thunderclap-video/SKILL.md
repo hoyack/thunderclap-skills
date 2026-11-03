@@ -115,7 +115,8 @@ API is called. Rejected requests cost nothing. Failed jobs report:
 |---|---|
 | `reference_image` | image URL not reachable or not PNG/JPEG/WebP; fix the URL, new job |
 | `preflight` / `credit_ceiling` | Higgsfield gave no quote / too expensive; nothing billed |
-| `engine` | Higgsfield error; usually `resume_video` |
+| `engine` / `generation` | Higgsfield error or a clip failed twice; usually `resume_video` |
+| `generation_timeout` | Higgsfield is backed up: a clip was still rendering after ~60 min. It was not resubmitted; wait a while, then `resume_video` picks up that same clip (no second charge) |
 | `audio` | ElevenLabs failed (e.g. bad voice id); fix, then `resume_video` |
 | `assembly` | render failed; `resume_video` |
 | `higgsfield_auth` | the operator must reconnect Higgsfield; then `resume_video` |
