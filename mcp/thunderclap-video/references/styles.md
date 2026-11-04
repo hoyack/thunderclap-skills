@@ -5,9 +5,9 @@ repo); this file is generated from it. Refresh when styles change.
 Pass the **slug** as `style`. **14 are usable.** Don't use these three:
 
 - `screen-walkthrough`: disabled (needs real screen recordings); rejected.
-- `still-sequence` and `split-screen`: accepted by the API but their generation is **not
-  implemented** (it makes normal clips and the stills/left-right layout comes out wrong).
-  Use `cartoon-explainer`/`motion-graphics` instead, or describe a before/after across two clips.
+- `still-sequence` and `split-screen`: rejected because their generation is **not
+  implemented**. Use `cartoon-explainer`/`motion-graphics` instead, or describe a
+  before/after across two clips.
 
 Defaults below apply when the request doesn't set them. With `voiceover_script` the
 narration sets the length; overlay text is opt-in for every style. Planner instructions
